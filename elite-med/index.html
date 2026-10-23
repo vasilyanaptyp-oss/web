@@ -1,381 +1,465 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" data-state="static">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elite Med Urgent Care | Walk-in urgent care in Hickory Hills, IL</title>
-<meta name="description" content="Elite Med Urgent Care, 9634 S Roberts Rd, Hickory Hills, IL. Open every day, 8 AM to 10 PM. Call (708) 741-7944.">
+<meta name="description" content="Walk-in urgent care at 9634 S Roberts Rd, Hickory Hills, IL. Open every day, 8 AM to 10 PM. X-ray on site. Call (708) 741-7944.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://vasylian.com/web/elite-med/">
-<meta name="theme-color" content="#0B2233">
+<meta name="theme-color" content="#121411">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/newsreader.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/bigshoulders.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/publicsans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:"Newsreader";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/newsreader.woff2) format("woff2")}
-@font-face{font-family:"Figtree";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/figtree.woff2) format("woff2")}
+@font-face{font-family:"Big Shoulders";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/bigshoulders.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/publicsans.woff2) format("woff2")}
 :root{
-  --ink:#0B2233;--deep:#10303F;
-  --paper:#FBF8F3;--bone:#F3EDE3;--line:#E3DACB;
-  --text:#1B2F3B;--muted:#5C6A72;
-  --amber:#F2A33A;--amber2:#FFC067;--amberink:#9A5F10;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --gut:22px;
+  --ink:#121411;--ink2:#1C1F1B;--paper:#F3F1EB;--white:#fff;
+  --go:#0A7A45;--go-hi:#0C8C50;--lit:#3BE07A;--stop:#C8261C;--stop-hi:#DC3226;
+  --grey:#5F625C;--rule:#D6D3C9;--track:#DCD8CE;
+  --sign:"Big Shoulders","Arial Narrow","Roboto Condensed",sans-serif;
+  --text:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --gut:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--text);font-size:18px;line-height:1.5;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:10px 14px;z-index:100;border-radius:6px}
+ul{list-style:none}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:#fff;color:#000;padding:10px 14px}
 .skip:focus{left:8px}
-:focus-visible{outline:3px solid var(--amber2);outline-offset:3px}
-.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--gut)}
+:focus-visible{outline:3px solid var(--lit);outline-offset:3px}
+.wrap{width:100%;max-width:1360px;margin:0 auto;padding:0 var(--gut)}
+.sign-type{font-family:var(--sign);font-weight:850;text-transform:uppercase;letter-spacing:.005em;line-height:.86;font-optical-sizing:auto}
+.nw{white-space:nowrap}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 17px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;transition:background .2s,border-color .2s,color .2s;cursor:pointer;white-space:nowrap}
-.btn svg{width:19px;height:19px;flex:none}
-.btn-call{background:var(--amber);color:#1B1205}
-.btn-call:hover{background:var(--amber2)}
-.btn-ghost{color:#fff;border-color:rgba(255,255,255,.6);background:rgba(11,34,51,.28)}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.14)}
-.btn-line{border-color:var(--ink);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:#fff}
-
-/* hero */
-.hero{position:relative;color:#fff;min-height:max(100svh,660px);display:flex;flex-direction:column;overflow:hidden;background:var(--ink);isolation:isolate}
-.hero picture,.hero .shade{position:absolute;inset:0;z-index:-2}
-.hero picture img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
-.hero .shade{z-index:-1;background:linear-gradient(180deg,rgba(11,34,51,.55) 0,rgba(11,34,51,.08) 16%,rgba(11,34,51,.12) 34%,rgba(11,34,51,.72) 58%,rgba(11,34,51,.95) 100%)}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:12px}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-height:44px}
-.brand .mark{width:34px;height:34px;border-radius:50%;background:var(--amber);display:grid;place-items:center;flex:none}
-.brand .mark svg{width:18px;height:18px}
-.brand b{display:block;font:600 21px/1 var(--serif);letter-spacing:.2px}
-.brand small{display:block;font:500 11.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-top:3px}
+/* top strip */
+.top{background:var(--ink);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px}
+.mark{display:flex;align-items:baseline;gap:7px;white-space:nowrap;text-decoration:none;font-family:var(--sign);text-transform:uppercase;line-height:1;padding:10px 0}
+.mark b{font-weight:850;font-size:25px;letter-spacing:.02em}
+.mark span{font-weight:500;font-size:25px;letter-spacing:.02em;color:#BDBFB8}
 .nav{display:none}
-.top .btn-call{min-height:46px;padding:0 15px}
-.top .btn-call span{display:none}
-.hero-body{margin-top:auto;padding-top:24px;padding-bottom:24px}
-.eyebrow{font:600 12.5px/1.3 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--amber2);margin-bottom:12px}
-h1{font:600 clamp(40px,11.2vw,50px)/1.03 var(--serif);letter-spacing:-.012em;text-wrap:balance}
-h1 em{font-style:normal;color:var(--amber2)}
-.lead{margin-top:14px;font-size:17.5px;line-height:1.5;color:rgba(255,255,255,.92);max-width:34ch}
-.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.cta .btn{padding:0 10px;font-size:16px}
-.cta .btn-ghost svg{display:none}
-.glass{margin-top:20px;border:1px solid rgba(255,255,255,.2);background:rgba(11,34,51,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:16px;padding:2px 18px 12px}
-.glass .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.16)}
-.glass .row.dsk{display:none}
-.glass dt{font:600 11.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
-.glass dd{font:600 16px/1.25 var(--sans);text-align:right}
-.glass .status{display:inline-flex;align-items:center;gap:7px}
-.glass .status i{width:8px;height:8px;border-radius:50%;background:#6FE3A5;box-shadow:0 0 0 3px rgba(111,227,165,.22)}
-.glass .status.closed i{background:var(--amber);box-shadow:0 0 0 3px rgba(242,163,58,.25)}
-.glass .e911{font-size:13px;line-height:1.4;color:rgba(255,255,255,.85);padding-top:10px}
-.glass .e911 b{color:#fff;font-weight:600}
+.top .tel{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:46px;min-height:46px;background:var(--go);color:#fff;text-decoration:none}
+.top .tel svg{width:22px;height:22px;flex:none}
+.top .tel span{display:none}
 
-/* strip */
-.strip{background:var(--paper)}
-.strip ul{list-style:none;display:grid}
-.strip li{padding:28px 0;border-bottom:1px solid var(--line);font:500 clamp(30px,8.4vw,38px)/1.08 var(--serif);color:var(--ink);letter-spacing:-.01em}
-.strip li:last-child{border-bottom:0}
-.strip li span{display:block;color:var(--amberink)}
+/* the sign */
+.sign{padding:22px 0 0}
+.now{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:500 15px/1.3 var(--text);color:var(--grey);font-variant-numeric:tabular-nums}
+.now b{font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:.06em;display:inline-flex;align-items:center;gap:9px}
+.dot{width:12px;height:12px;border-radius:50%;background:#9A9D95;flex:none;display:inline-block}
+.is-open .dot{background:var(--go);box-shadow:0 0 0 4px rgba(10,122,69,.16);animation:pulse 2.4s ease-in-out infinite}
+.is-closed .now b{color:var(--stop)}
+.is-closed .dot{background:var(--stop)}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(10,122,69,.05)}}
+h1{margin-top:12px;font-size:clamp(70px,27.5vw,128px)}
+h1 span{display:block}
+h1 .g{color:var(--go)}
+.is-closed h1 .g{color:var(--ink)}
 
-/* sections */
-section{padding:84px 0}
-.kicker{font:600 12.5px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--amberink);margin-bottom:16px}
-h2{font:600 clamp(38px,10.4vw,48px)/1.04 var(--serif);letter-spacing:-.014em;color:var(--ink);text-wrap:balance}
-.sub{margin-top:18px;color:var(--muted);max-width:60ch;font-size:18px;text-wrap:pretty}
+.day{position:relative;margin-top:22px;padding-top:26px}
+.track{position:relative;height:14px;background:var(--track)}
+.track .open{position:absolute;top:0;bottom:0;left:33.3333%;width:58.3333%;background:var(--go)}
+.needle{position:absolute;top:-8px;bottom:-8px;width:3px;margin-left:-1.5px;background:var(--ink);display:none}
+.needle span{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);font:700 13px/1 var(--text);font-variant-numeric:tabular-nums;white-space:nowrap;background:var(--ink);color:#fff;padding:4px 6px}
+html:not([data-state="static"]) .needle{display:block}
+.ticks{position:relative;height:22px;margin-top:8px;font:600 13px/1 var(--text);color:var(--grey)}
+.ticks span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.ticks .t0{left:0;transform:none}.ticks .t24{right:0;left:auto;transform:none}
+.ticks .t8{left:33.3333%}.ticks .t12{left:50%}.ticks .t22{left:91.6667%}
+.ticks .t0,.ticks .t24,.ticks .t12{display:none}
+.left{margin-top:6px;font-size:18px;line-height:1.4}
+.left b{font-weight:700}
 
-.cards{display:grid;gap:18px;margin-top:40px}
-.card{position:relative;display:block;border-radius:20px;overflow:hidden;color:#fff;background:var(--ink);aspect-ratio:4/5;isolation:isolate}
-.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s}
-.card.care img{object-position:50% 38%}
-.card.xr img{object-position:50% 22%}
-.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,34,51,0) 46%,rgba(11,34,51,.88) 100%)}
-.card div{position:absolute;left:0;right:0;bottom:0;padding:26px 26px 26px}
-.card h3{font:600 31px/1.08 var(--serif)}
-.card p{margin-top:8px;font-size:16px;line-height:1.45;color:rgba(255,255,255,.9);max-width:34ch}
-@media(hover:hover){.card:hover img{transform:scale(1.04)}}
+.plates{display:grid;gap:10px;margin-top:18px}
+.plate{display:block;text-decoration:none;padding:13px 18px 15px}
+.plate small{display:flex;align-items:center;justify-content:space-between;gap:12px;font:700 13px/1.2 var(--text);text-transform:uppercase;letter-spacing:.07em}
+.plate strong{display:block;margin-top:5px;font-family:var(--sign);font-weight:850;line-height:.95;letter-spacing:.005em;white-space:nowrap}
+.plate svg{width:24px;height:24px;flex:none}
+.plate.call{background:var(--go);color:#fff}
+.plate.call strong{font-size:min(13.4vw,58px)}
+.plate.call:hover{background:var(--go-hi)}
+.plate.dir{border:3px solid var(--ink);padding:10px 15px 12px}
+.plate.dir strong{font-size:clamp(28px,8.6vw,38px);text-transform:uppercase}
+.plate.dir:hover{background:var(--ink);color:#fff}
+.e911{margin-top:14px;font-weight:700;font-size:17px;line-height:1.4;color:var(--stop)}
+.e911 a{text-underline-offset:3px;text-decoration-thickness:2px;display:inline-block;padding:4px 0}
+.is-closed .e911{background:var(--stop);color:#fff;padding:12px 16px}
+.window{margin:34px calc(-1*var(--gut)) 0}
+.window img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%}
 
-.more{display:grid;margin-top:12px}
-.more div{padding:26px 0;border-bottom:1px solid var(--line)}
-.more h3{font:600 28px/1.1 var(--serif);color:var(--ink)}
-.more p{margin-top:6px;color:var(--muted);font-size:17px}
-.note{margin-top:26px;font-size:15px;color:var(--muted)}
 
-.visit{background:var(--bone)}
-.split{display:grid;gap:40px}
-.photo{border-radius:20px;overflow:hidden;background:var(--line)}
-.photo img{width:100%;height:100%;object-fit:cover}
-.visit .photo{aspect-ratio:6/5}
-.visit .photo img{object-position:62% 78%}
-.facts{margin-top:30px}
-.facts .f{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:16px 0}
-.facts .f+.f{border-top:1px solid var(--line)}
-.facts dt{font:600 12px/1.7 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.facts dd{font-weight:500;font-size:18px}
-.facts dd small{display:block;color:var(--muted);font-size:15px;font-weight:400;margin-top:2px}
-.facts a{text-decoration:none;display:inline-block;padding:8px 0;border-bottom:1.5px solid var(--amber)}
-.btns{display:grid;gap:10px;margin-top:30px}
-.map{margin-top:56px}
-.map iframe{display:block;width:100%;height:340px;border:0;border-radius:20px;background:var(--line);filter:saturate(.75) contrast(.97)}
-.map p{margin-top:12px;font-size:14.5px;color:var(--muted)}
-.map a{color:var(--ink);display:inline-block;padding:11px 2px;line-height:1.2}
+/* section heads */
+section{padding:64px 0}
+h2{font-size:clamp(54px,17vw,112px)}
+.lede{margin-top:16px;font-size:21px;line-height:1.38;max-width:34ch;text-wrap:pretty}
 
-.about{padding:96px 0}
-.about q{display:block;quotes:none;font:500 clamp(32px,8.6vw,54px)/1.12 var(--serif);color:var(--ink);letter-spacing:-.014em;max-width:22ch;text-wrap:balance}
-.about p{margin-top:24px;color:var(--muted);max-width:56ch;font-size:18px}
-.amen{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:30px;list-style:none;font-weight:500;font-size:16px}
-.amen li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--amber);margin-right:9px;vertical-align:middle;position:relative;top:-1px}
+/* here or the ER */
+.guide{padding-top:56px}
+.faces{margin-top:30px;display:grid}
+.face{padding:26px 20px 28px}
+.face h3{font-family:var(--sign);font-weight:850;text-transform:uppercase;font-size:clamp(40px,12.4vw,64px);line-height:.9;text-wrap:balance}
+.face .sub{margin-top:12px;font-size:18px;line-height:1.45}
+.face ul{margin-top:16px}
+.face li{padding:11px 0 11px 30px;border-top:1px solid var(--rule);position:relative;font-size:19px;line-height:1.35}
+.face li::before{content:"";position:absolute;left:2px;top:19px;width:14px;height:4px;background:currentColor}
+.face.here{background:var(--white);border:3px solid var(--ink);border-bottom:0}
+.face.here h3{color:var(--go)}
+.face.here li::before{background:var(--go)}
+.face.here .also{margin-top:18px;font-size:17px;color:var(--grey)}
+.face.er{background:var(--stop);color:#fff}
+.face.er li{border-top-color:rgba(255,255,255,.35)}
+.face.er .must{margin-top:20px;font-weight:800;font-size:22px;line-height:1.3}
+.face.er .must a{text-underline-offset:4px;text-decoration-thickness:2px}
+.unsure{margin-top:22px;font-size:19px;line-height:1.45;max-width:46ch}
+.unsure a{font-weight:700;white-space:nowrap;text-underline-offset:3px;display:inline-block;padding:3px 0}
+.fine{margin-top:8px;font-size:15px;color:var(--grey)}
 
-.band{background:var(--ink);color:#fff;padding:96px 0}
-.band h2{color:#fff}
-.band .sub{color:rgba(255,255,255,.78)}
-.band .tel{display:block;margin-top:28px;font:600 clamp(42px,11.6vw,80px)/1 var(--serif);text-decoration:none;letter-spacing:-.01em}
-.band .btns{margin-top:32px}
-.band .btn-ghost{background:transparent}
-.where{font-style:normal;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18);font-size:17px;line-height:1.6;color:rgba(255,255,255,.88)}
-.where span{display:block;color:rgba(255,255,255,.62);font-size:15px;margin-top:6px}
+/* what's here: directory board */
+.onsite{background:var(--ink);color:#fff}
+.onsite h2{color:#fff}
+.onsite .lede{color:#D5D7D0}
+.board{margin-top:32px;background-color:#1A1D19;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.035) 0 2px,transparent 2px 7px);border:10px solid #2A2D28;box-shadow:inset 0 0 0 1px #000;padding:18px 16px 20px;font-family:var(--text);text-transform:uppercase}
+.board .head{text-align:center;font-weight:800;font-size:14px;letter-spacing:.12em;line-height:1.5;color:#fff;padding-bottom:14px;margin-bottom:6px;border-bottom:1px dashed rgba(255,255,255,.3)}
+.board .head span{display:block;color:var(--lit)}
+.board dl div{display:flex;align-items:baseline;gap:8px;padding:9px 0}
+.board dt{font-weight:700;font-size:14.5px;letter-spacing:.06em;line-height:1.3;color:#F4F4EF;max-width:70%}
+.board dd{font-weight:800;font-size:14.5px;letter-spacing:.07em;color:var(--lit);white-space:nowrap;margin-left:auto}
+.board dl div::after{content:"";order:1;flex:1 1 12px;min-width:12px;border-bottom:2px dotted rgba(255,255,255,.32);transform:translateY(-4px)}
+.board dd{order:2}
+.board dd a{color:var(--lit);text-underline-offset:3px;display:inline-block;padding:12px 0;margin:-12px 0}
+.board .gap{height:10px;padding:0}
+.board .gap::after{display:none}
+.onsite figure{margin-top:28px}
+.onsite figure img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%}
 
-footer{background:#06151F;color:rgba(255,255,255,.72);padding:38px 0 100px;font-size:15px}
-footer .wrap{display:grid;gap:18px}
-footer b{color:#fff;font-weight:600}
-footer .e{color:#fff;max-width:60ch}
-footer a{text-decoration:none;display:inline-block;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.4)}
+/* find us */
+.find .num{font-size:min(45vw,330px);line-height:.8;letter-spacing:-.01em}
+.find .street{margin-top:12px;font-family:var(--sign);font-weight:800;text-transform:uppercase;font-size:clamp(34px,10.4vw,64px);line-height:.95}
+.find .street span{display:block;color:var(--grey);font-weight:600}
+.find .near{margin-top:18px;font-size:19px;line-height:1.45;max-width:40ch}
+.find .plates{margin-top:24px}
+.plate.ink{background:var(--ink);color:#fff}
+.plate.ink:hover{background:#2C302A}
+.plate.ink strong,.plate.line strong{font-size:clamp(28px,8.6vw,38px);text-transform:uppercase}
+.plate.line{border:3px solid var(--ink);padding:10px 15px 12px}
+.plate.line:hover{background:var(--ink);color:#fff}
+.map{margin-top:32px}
+.map iframe{display:block;width:100%;height:340px;border:3px solid var(--ink);background:var(--track)}
+.map p{margin-top:10px;font-size:15px;color:var(--grey)}
+.map a{display:inline-block;padding:6px 0;text-underline-offset:3px}
+.find .small{margin-top:14px;font-size:17px}
 
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.25fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(11,34,51,.97);border-top:1px solid rgba(255,255,255,.14);transform:translateY(110%);transition:transform .3s}
+/* call */
+.ring{background:var(--go);color:#fff;padding:0}
+.ring a{display:block;text-decoration:none;padding:56px 0 60px}
+.ring small{display:block;font:800 14px/1.3 var(--text);text-transform:uppercase;letter-spacing:.08em}
+.ring strong{display:block;margin-top:14px;font-size:min(23vw,220px);line-height:.92}
+.ring strong span{display:block;white-space:nowrap}
+.ring .st{display:flex;align-items:center;gap:10px;margin-top:30px;font:600 15px/1.3 var(--text);text-transform:uppercase;letter-spacing:.04em}
+.ring .st .dot{background:#fff;box-shadow:none;animation:none}
+.ring a:hover{background:var(--go-hi)}
+
+footer{background:var(--ink);color:#C9CBC4;padding:40px 0 120px;font-size:16px;line-height:1.55}
+footer .wrap{display:grid;gap:20px}
+footer b{color:#fff}
+footer a{text-underline-offset:3px;display:inline-block;padding:5px 0}
+footer .e{color:#fff;font-weight:700;font-size:18px}
+footer .e a{color:#fff}
+
+/* sticky bar (phones) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--ink);border-top:1px solid #33372F;transform:translateY(110%);transition:transform .25s ease}
 .bar.on{transform:none}
-.bar .btn{min-height:48px;padding:0 10px;font-size:16px}
+.bar a{display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.bar .bc{background:var(--go);color:#fff}
+.bar .bd{border:2px solid #fff;color:#fff;padding:0 16px}
+.bar .dot{width:10px;height:10px;background:#fff;box-shadow:none;animation:none}
 
 @media (min-width:760px){
   :root{--gut:40px}
-  body{font-size:18px}
-  .hero{min-height:max(100svh,720px)}
-  .top{padding-top:26px}
-  .top .btn-call span{display:inline}
-  .top .btn-call{padding:0 22px}
-  .nav{display:flex;gap:36px;margin-left:auto;margin-right:30px}
-  .nav a{text-decoration:none;font-weight:500;font-size:16px;opacity:.94}
-  .nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
-  .hero .shade{background:linear-gradient(90deg,rgba(11,34,51,.9) 0,rgba(11,34,51,.7) 34%,rgba(11,34,51,.12) 66%,rgba(11,34,51,0) 100%),linear-gradient(180deg,rgba(11,34,51,.5) 0,rgba(11,34,51,0) 20%,rgba(11,34,51,0) 62%,rgba(11,34,51,.7) 100%)}
-  .hero-body{display:grid;grid-template-columns:minmax(0,1fr) 380px;column-gap:48px;align-items:end;padding-bottom:52px}
-  .hero-body .txt{grid-column:1;max-width:620px}
-  .glass{grid-column:2;margin-top:0}
-  .glass .row.dsk{display:flex}
-  .glass .row.mob{display:none}
-  h1{font-size:clamp(58px,5.6vw,80px)}
-  .lead{font-size:20px;max-width:44ch}
-  .cta{display:flex;gap:12px}
-  .cta .btn{padding:0 30px;font-size:17px}
-  .cta .btn-ghost svg{display:block}
-  .strip ul{grid-template-columns:repeat(3,1fr)}
-  .strip li{padding:52px 36px 52px 0;border-bottom:0;font-size:clamp(34px,3.1vw,44px)}
-  .strip li+li{padding-left:44px;border-left:1px solid var(--line)}
-  section{padding:132px 0}
-  .cards{grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
-  .card{aspect-ratio:1/1}
-  .card h3{font-size:38px}
-  .card p{font-size:17px}
-  .card div{padding:34px}
-  .more{grid-template-columns:1fr 1fr;gap:0 24px;margin-top:20px}
-  .more div{padding:32px 0}
-  .split{grid-template-columns:1.1fr 1fr;gap:88px;align-items:center}
-  .visit .photo{aspect-ratio:1/1.08}
-  .btns{display:flex;gap:12px}
-  .map iframe{height:440px}
-  .about{padding:152px 0}
-  .band{padding:132px 0}
-  .band .wrap{display:grid;grid-template-columns:1.4fr 1fr;column-gap:72px;align-items:end}
-  .band .wrap>*{grid-column:1}
-  .band .where{grid-column:2;grid-row:1/span 6;align-self:end;margin-top:0;border-top:0;border-left:1px solid rgba(255,255,255,.2);padding:4px 0 4px 36px}
+  .top .wrap{min-height:64px}
+  .nav{display:flex;gap:30px;margin-left:auto}
+  .nav a{font-weight:600;font-size:16px;text-decoration:none;color:#E6E7E1;padding:8px 0}
+  .nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px}
+  .top .tel{margin-left:34px;font:800 22px/1 var(--sign);letter-spacing:.02em;padding:0 16px}
+  .top .tel span{display:inline}
+  .top .tel svg{width:19px;height:19px}
+  .top .tel:hover{background:var(--go-hi)}
+  .sign{padding:40px 0 0}
+  .window{margin:48px calc(-1*var(--gut)) 0}
+  .window img{aspect-ratio:16/9}
+  .now{font-size:15px}
+  h1{font-size:clamp(96px,10.4vw,164px);margin-top:20px}
+  h1 .l2,h1 .l3{display:inline}
+  .ticks .t0,.ticks .t24,.ticks .t12{display:block}
+  .left{font-size:19px}
+  .plates{grid-template-columns:1.25fr 1fr;gap:14px}
+  .plate{padding:16px 22px 18px}
+  .plate.dir,.plate.line{padding:13px 19px 15px}
+  .plate.call strong{font-size:clamp(40px,3.7vw,56px)}
+  .plate.dir strong,.plate.ink strong,.plate.line strong{font-size:clamp(28px,2.5vw,36px)}
+  section{padding:120px 0}
+  .guide .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:end}
+  .lede{font-size:23px;margin-top:0}
+  .faces{grid-template-columns:1fr 1fr;margin-top:48px}
+  .face{padding:40px 40px 44px}
+  .face.here{border-bottom:3px solid var(--ink);border-right:0}
+  .face h3{font-size:clamp(46px,4.2vw,64px)}
+  .face li{font-size:20px}
+  .onsite .grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:64px;align-items:end}
+  .onsite figure{margin-top:0}
+  .onsite figure img{aspect-ratio:4/5.2}
+  .board{padding:26px 30px 30px;border-width:14px}
+  .board .head{font-size:15px}
+  .board dt,.board dd{font-size:16px}
+  .board dl div{padding:11px 0}
+  .find .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:start}
+  .find .num{font-size:clamp(200px,21vw,330px)}
+  .find .street{font-size:clamp(40px,3.8vw,60px)}
+  .find .plates{grid-template-columns:1fr 1fr}
+  .map{margin-top:0}
+  .map iframe{height:560px}
+  .ring a{padding:88px 0 92px}
+  .ring strong{font-size:clamp(120px,13.6vw,220px)}
+  .ring strong span{display:inline}
+  footer{padding:52px 0 56px}
+  footer .wrap{grid-template-columns:1.2fr 1fr 1.4fr;gap:40px}
   .bar{display:none}
-  footer{padding-bottom:52px}
-  footer .wrap{grid-template-columns:1.3fr 1fr 1fr;gap:40px}
 }
-@media (max-width:759px) and (max-height:700px){.lead,.eyebrow{display:none}}
+@media (min-width:1100px){
+  .sign{padding-bottom:64px}
+  .sign .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,33%);gap:0 56px;align-items:stretch}
+  .window{margin:0;position:relative;min-height:100%}
+  .window img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:46% 40%}
+}
+@media (min-width:760px) and (max-width:1099px){
+  .onsite .grid,.find .grid{grid-template-columns:1fr}
+  .map{margin-top:40px}
+}
 @media (max-width:359px){
-  :root{--gut:16px}
-  h1{font-size:35px}
-  .cta .btn{font-size:15px;padding:0 6px}
-  .glass dd{font-size:15px}
+  .mark b,.mark span{font-size:22px}
+  .plate{padding:12px 14px 14px}
+  .plate.dir,.plate.line{padding:9px 11px 11px}
+  .plate small{font-size:12px}
+  .face{padding:22px 16px 24px}
+  .board{padding:14px 10px 16px;border-width:8px}
+  .board dt,.board dd{font-size:13px;letter-spacing:.03em}
+  .board .head{letter-spacing:.08em}
+  .bar a{font-size:15px}
+  .bar .dot{display:none}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalClinic","name":"Elite Med Urgent Care","legalName":"Elite Med Urgent Care LLC","telephone":"+1-708-741-7944","url":"https://vasylian.com/web/elite-med/","address":{"@type":"PostalAddress","streetAddress":"9634 S Roberts Rd","addressLocality":"Hickory Hills","addressRegion":"IL","postalCode":"60457","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":41.7155839,"longitude":-87.8194445},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"22:00"}]}
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Elite Med Urgent Care","legalName":"Elite Med Urgent Care LLC","telephone":"+1-708-741-7944","url":"https://vasylian.com/web/elite-med/","address":{"@type":"PostalAddress","streetAddress":"9634 S Roberts Rd","addressLocality":"Hickory Hills","addressRegion":"IL","postalCode":"60457","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":41.7155839,"longitude":-87.8194445},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"22:00"}],"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Wheelchair accessible","value":true},{"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true}]}
 </script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="hero" id="top">
-  <picture>
-    <source media="(min-width:760px)" srcset="assets/hero-desktop.jpg" width="1920" height="1080">
-    <img src="assets/hero-mobile.jpg" width="720" height="1558" alt="A smiling clinician talking with a patient across a desk in a bright exam office" fetchpriority="high" decoding="async">
-  </picture>
-  <div class="shade"></div>
-
-  <div class="wrap top">
-    <a class="brand" href="#top" aria-label="Elite Med Urgent Care, home">
-      <span class="mark" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M8 2h4v6h6v4h-6v6H8v-6H2V8h6z" fill="#1B1205"/></svg></span>
-      <span><b>Elite Med</b><small>Urgent Care</small></span>
-    </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#visit">Hours and location</a>
-      <a href="#about">About</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Elite Med Urgent Care, top of page"><b>Elite Med</b><span>Urgent Care</span></a>
+    <nav class="nav" aria-label="On this page">
+      <a href="#here-or-er">Here, or the ER?</a>
+      <a href="#on-site">What's here</a>
+      <a href="#find-us">Find us</a>
     </nav>
-    <a class="btn btn-call" href="tel:+17087417944" aria-label="Call (708) 741-7944">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      <span>(708) 741-7944</span>
-    </a>
-  </div>
-
-  <div class="wrap hero-body">
-    <div class="txt">
-      <p class="eyebrow">Urgent care · Hickory Hills, IL</p>
-      <h1>Urgent care in Hickory Hills, <em>open every day</em></h1>
-      <p class="lead">Walk in for illnesses and injuries, from 8&nbsp;AM to 10&nbsp;PM.</p>
-      <div class="cta">
-        <a class="btn btn-call" href="tel:+17087417944">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          Call now
-        </a>
-        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">
-          Get directions
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-    <dl class="glass" aria-label="At a glance">
-      <div class="row"><dt>Hours</dt><dd><span class="status" id="status"><i></i><span id="statusText">Every day, 8&nbsp;AM to 10&nbsp;PM</span></span></dd></div>
-      <div class="row dsk"><dt>Walk-ins</dt><dd>Welcome</dd></div>
-      <div class="row"><dt>Address</dt><dd>9634&nbsp;S&nbsp;Roberts&nbsp;Rd</dd></div>
-      <div class="e911"><b>If this is a life-threatening emergency, call 911.</b></div>
-    </dl>
+    <a class="tel" href="tel:+17087417944" aria-label="Call (708) 741-7944"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>(708) 741-7944</span></a>
   </div>
 </header>
 
-<div class="strip" aria-label="At a glance">
-  <div class="wrap">
-    <ul>
-      <li>Open 7 days,<span>8&nbsp;AM to 10&nbsp;PM</span></li>
-      <li>X-ray<span>on site</span></li>
-      <li>Walk in,<span>no appointment</span></li>
-    </ul>
-  </div>
-</div>
-
 <main id="main">
+<section class="sign" id="top" aria-labelledby="headline">
+  <div class="wrap grid">
+    <div class="sign-main">
+      <p class="now"><b id="state"><i class="dot"></i><span id="stateText">Open every day</span></b><span id="clock">8 AM to 10 PM, Hickory Hills time</span></p>
+      <h1 class="sign-type" id="headline"><span class="l1">Open</span> <span class="l2 g">every</span> <span class="l3 g">day.</span></h1>
 
-<section id="services" style="padding-top:72px">
-  <div class="wrap">
-    <p class="kicker">Services</p>
-    <h2>Walk-in care, with testing on site</h2>
-    <p class="sub">Come in for illnesses and injuries. Imaging and breathing tests are done at the clinic.</p>
+      <div class="day" aria-hidden="true">
+        <div class="track"><div class="open"></div><div class="needle" id="needle"><span id="needleText"></span></div></div>
+        <div class="ticks"><span class="t0">12 AM</span><span class="t8">8 AM</span><span class="t12">Noon</span><span class="t22">10 PM</span><span class="t24">12 AM</span></div>
+      </div>
+      <p class="left" id="left"><b>Every day, 8 AM to 10 PM.</b> Weekends too. Walk-ins welcome.</p>
 
-    <div class="cards">
-      <a class="card care" href="tel:+17087417944">
-        <img src="assets/care.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="An adult checking a child's temperature">
-        <div><h3>Illnesses and injuries</h3><p>Walk in when it can't wait for a regular appointment.</p></div>
-      </a>
-      <a class="card xr" href="tel:+17087417944">
-        <img src="assets/xray.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="A clinician looking at a chest X-ray film">
-        <div><h3>X-ray on site</h3><p>Get imaging done at the clinic, without a trip elsewhere.</p></div>
-      </a>
+      <div class="plates">
+        <a class="plate call" href="tel:+17087417944" id="heroCall">
+          <small>Call the clinic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></small>
+          <strong>(708) 741-7944</strong>
+        </a>
+        <a class="plate dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">
+          <small>Directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></small>
+          <strong>9634 S Roberts Rd</strong>
+        </a>
+      </div>
+      <p class="e911">If this is a <span class="nw">life-threatening</span> emergency, <a href="tel:911">call 911</a>.</p>
     </div>
-
-    <div class="more">
-      <div><h3>Point-of-care ultrasound</h3><p>Ultrasound (POCUS) done on site.</p></div>
-      <div><h3>Spirometry</h3><p>A breathing test, done on site.</p></div>
-    </div>
-    <p class="note">Not sure whether we can help? Call <span style="white-space:nowrap">(708) 741-7944</span> and ask before you come in.</p>
+    <figure class="window"><picture><source media="(min-width:1100px)" srcset="assets/fever-tall.jpg" width="900" height="1200"><img src="assets/fever-wide.jpg" width="960" height="720" alt="A parent checking the temperature of a child wrapped in a blanket on a green couch" decoding="async"></picture></figure>
   </div>
 </section>
 
-<section class="visit" id="visit">
+<section class="guide" id="here-or-er" aria-labelledby="h-guide">
   <div class="wrap">
-    <div class="split">
-      <div class="photo"><img src="assets/visit.jpg" width="1200" height="1000" loading="lazy" decoding="async" alt="Patients checking in at a bright clinic reception desk"></div>
-      <div>
-        <p class="kicker">Hours and location</p>
-        <h2>Open seven days a week</h2>
-        <dl class="facts">
-          <div class="f"><dt>Hours</dt><dd>Every day, 8&nbsp;AM to 10&nbsp;PM<small>Walk-ins welcome. Reservations are also accepted.</small></dd></div>
-          <div class="f"><dt>Address</dt><dd>9634&nbsp;S&nbsp;Roberts&nbsp;Rd<br>Hickory Hills, IL 60457</dd></div>
-          <div class="f"><dt>Phone</dt><dd><a href="tel:+17087417944">(708) 741-7944</a></dd></div>
-          <div class="f"><dt>Insurance</dt><dd>Questions about coverage?<small>Call us before your visit and ask.</small></dd></div>
-        </dl>
-        <div class="btns">
-          <a class="btn btn-call" href="tel:+17087417944">Call now</a>
-          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">Get directions</a>
-        </div>
+    <div class="head">
+      <h2 class="sign-type" id="h-guide">Here, or<br>the ER?</h2>
+      <p class="lede">If it can't wait for an appointment, walk in. If it can't wait at all, call 911.</p>
+    </div>
+    <div class="faces">
+      <div class="face here">
+        <h3>Walk in here</h3>
+        <p class="sub">For illnesses and injuries that need care today but are not life-threatening. For example:</p>
+        <ul>
+          <li>Coughs, colds and flu symptoms</li>
+          <li>Sore throats and earaches</li>
+          <li>A fever</li>
+          <li>Sprains, strains and minor falls</li>
+          <li>Small cuts, scrapes and minor burns</li>
+          <li>Rashes and bug bites</li>
+        </ul>
+        <p class="also">X-ray, point-of-care ultrasound and spirometry are on site.</p>
+      </div>
+      <div class="face er">
+        <h3>Call 911 or go to the ER</h3>
+        <p class="sub">For signs of a life-threatening emergency, like:</p>
+        <ul>
+          <li>Chest pain or pressure</li>
+          <li>Trouble breathing</li>
+          <li>Face drooping, arm weakness or slurred speech</li>
+          <li>Bleeding that will not stop</li>
+          <li>Fainting, a seizure or sudden confusion</li>
+          <li>A serious head injury or a major accident</li>
+        </ul>
+        <p class="must">If this is a <span class="nw">life-threatening</span> emergency, <a href="tel:911">call 911</a>.</p>
       </div>
     </div>
+    <p class="unsure">Not sure which one? Call <a href="tel:+17087417944">(708) 741-7944</a> and ask before you come in.</p>
+    <p class="fine">General information only, not medical advice.</p>
+  </div>
+</section>
+
+<section class="onsite" id="on-site" aria-labelledby="h-onsite">
+  <div class="wrap grid">
+    <div>
+      <h2 class="sign-type" id="h-onsite">What's here</h2>
+      <p class="lede">Walk in, no appointment. Imaging and a breathing test are done right at the clinic.</p>
+      <div class="board">
+        <p class="head">Elite Med Urgent Care<span>Open every day</span><span>8 AM to 10 PM</span></p>
+        <dl>
+          <div><dt>Walk-ins</dt><dd>Welcome</dd></div>
+          <div><dt>X-ray</dt><dd>On site</dd></div>
+          <div><dt>Point-of-care ultrasound</dt><dd>On site</dd></div>
+          <div><dt>Spirometry (breathing test)</dt><dd>On site</dd></div>
+          <div class="gap" aria-hidden="true"></div>
+          <div><dt>Wheelchair accessible</dt><dd>Yes</dd></div>
+          <div><dt>Accessible parking</dt><dd>Yes</dd></div>
+          <div><dt>Accessible restrooms</dt><dd>Yes</dd></div>
+          <div><dt>Free Wi-Fi</dt><dd>Yes</dd></div>
+          <div><dt>Contactless payments</dt><dd>Yes</dd></div>
+          <div class="gap" aria-hidden="true"></div>
+          <div><dt>Insurance questions</dt><dd><a href="tel:+17087417944">Call us</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <figure><img src="assets/xray-tall.jpg" width="900" height="1125" alt="A clinician holding up a chest X-ray to the light" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="find" id="find-us" aria-labelledby="h-find">
+  <div class="wrap grid">
+    <div>
+      <h2 class="vh" id="h-find">Find us</h2>
+      <p class="num sign-type" aria-hidden="true">9634</p>
+      <p class="street"><span class="vh">9634 </span>S Roberts Rd<span>Hickory Hills, IL 60457</span></p>
+      <p class="near">On Roberts Road in Hickory Hills, close to Palos Hills, Bridgeview and Oak Lawn. Accessible parking.</p>
+      <div class="plates">
+        <a class="plate ink" href="https://www.google.com/maps/dir/?api=1&amp;destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">
+          <small>Directions in <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></small><strong>Google Maps</strong>
+        </a>
+        <a class="plate line" href="https://maps.apple.com/?daddr=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">
+          <small>Directions in <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></small><strong>Apple Maps</strong>
+        </a>
+      </div>
+      <p class="small">Every day, 8 AM to 10 PM. On holidays, call ahead.</p>
+    </div>
     <div class="map">
-      <iframe title="Map of 9634&nbsp;S&nbsp;Roberts&nbsp;Rd, Hickory Hills, IL" loading="lazy" referrerpolicy="no-referrer" src="https://www.openstreetmap.org/export/embed.html?bbox=-87.8274%2C41.7105%2C-87.8114%2C41.7205&amp;layer=mapnik&amp;marker=41.7155839%2C-87.8194445"></iframe>
-      <p>Map data from <a href="https://www.openstreetmap.org/?mlat=41.7155839&amp;mlon=-87.8194445#map=17/41.7155839/-87.8194445" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Open in <a href="https://www.google.com/maps/search/?api=1&amp;query=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">Google Maps</a>.</p>
+      <iframe title="Map of 9634 S Roberts Rd, Hickory Hills, IL" loading="lazy" referrerpolicy="no-referrer" src="https://www.openstreetmap.org/export/embed.html?bbox=-87.8274%2C41.7105%2C-87.8114%2C41.7205&amp;layer=mapnik&amp;marker=41.7155839%2C-87.8194445"></iframe>
+      <p>Map data from <a href="https://www.openstreetmap.org/?mlat=41.7155839&amp;mlon=-87.8194445#map=17/41.7155839/-87.8194445" target="_blank" rel="noopener">OpenStreetMap</a> contributors.</p>
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="wrap">
-    <p class="kicker">About the clinic</p>
-    <q>A comfortable, <span style="white-space:nowrap">patient-centered</span> alternative to the ER.</q>
-    <p>For illnesses, injuries and common conditions that are not life-threatening, Elite Med Urgent Care is a walk-in option in Hickory Hills.</p>
-    <ul class="amen" aria-label="Good to know">
-      <li>Wheelchair accessible</li>
-      <li>Accessible parking</li>
-      <li>Accessible restrooms</li>
-      <li>Free Wi-Fi</li>
-      <li>Contactless payments</li>
-    </ul>
-  </div>
-</section>
-
-<section class="band" id="contact">
-  <div class="wrap">
-    <p class="kicker" style="color:var(--amber2)">Contact</p>
-    <h2>Call us, or just walk in</h2>
-    <p class="sub">Open every day, 8&nbsp;AM to 10&nbsp;PM.</p>
-    <a class="tel" href="tel:+17087417944">(708) 741-7944</a>
-    <div class="btns">
-      <a class="btn btn-call" href="tel:+17087417944">Call now</a>
-      <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">Get directions</a>
-    </div>
-    <address class="where">9634&nbsp;S&nbsp;Roberts&nbsp;Rd<br>Hickory Hills, IL 60457<span>Open every day, 8&nbsp;AM to 10&nbsp;PM</span></address>
-  </div>
+<section class="ring" id="call" aria-label="Call the clinic">
+  <a href="tel:+17087417944">
+    <span class="wrap" style="display:block">
+      <small>Call ahead, or just walk in</small>
+      <strong class="sign-type"><span>(708)</span> <span>741-7944</span></strong>
+      <span class="st"><i class="dot"></i><span id="ringText">Open every day, 8 AM to 10 PM</span></span>
+    </span>
+  </a>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <div><b>Elite Med Urgent Care LLC</b><br>9634&nbsp;S&nbsp;Roberts&nbsp;Rd, Hickory Hills, IL 60457</div>
-    <div><b>Hours</b><br>Every day, 8&nbsp;AM to 10&nbsp;PM<br><a href="tel:+17087417944">(708) 741-7944</a></div>
-    <p class="e"><b>If this is a life-threatening emergency, call 911.</b> This website gives general information about the clinic and is not medical advice.</p>
+    <div><b>Elite Med Urgent Care LLC</b><br>9634 S Roberts Rd<br>Hickory Hills, IL 60457</div>
+    <div><b>Every day, 8 AM to 10 PM</b><br><a href="tel:+17087417944">(708) 741-7944</a></div>
+    <div><p class="e">If this is a <span class="nw">life-threatening</span> emergency, <a href="tel:911">call 911</a>.</p><p>This website gives general information about the clinic and is not medical advice.</p></div>
   </div>
 </footer>
 
 <div class="bar" id="bar">
-  <a class="btn btn-call" href="tel:+17087417944">Call now</a>
-  <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">Directions</a>
+  <a class="bc" href="tel:+17087417944"><i class="dot"></i>Call (708) 741-7944</a>
+  <a class="bd" href="https://www.google.com/maps/dir/?api=1&amp;destination=9634+S+Roberts+Rd%2C+Hickory+Hills%2C+IL+60457" target="_blank" rel="noopener">Directions</a>
 </div>
 
 <script>
 (function(){
+  var OPEN=480,CLOSE=1320,root=document.documentElement,$=function(i){return document.getElementById(i)};
+  var parts,clockFmt;
   try{
-    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",hour:"numeric",hour12:false}).formatToParts(new Date());
-    var h=parseInt(p.filter(function(x){return x.type==="hour"})[0].value,10)%24;
-    var el=document.getElementById("status"),t=document.getElementById("statusText");
-    if(h>=8&&h<22){t.textContent="Open now, until 10\u00a0PM"}
-    else{el.className+=" closed";t.textContent="Closed now, opens 8\u00a0AM"}
-  }catch(e){}
-  var bar=document.getElementById("bar"),hero=document.getElementById("top");
-  if(bar&&hero&&"IntersectionObserver" in window){
-    new IntersectionObserver(function(en){bar.classList.toggle("on",!en[0].isIntersecting)},{threshold:0.05}).observe(hero);
+    parts=new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",hourCycle:"h23",hour:"numeric",minute:"numeric",weekday:"long"});
+    clockFmt=new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",hour:"numeric",minute:"2-digit"});
+  }catch(e){return}
+  function dur(m){var h=Math.floor(m/60),r=m%60;return h?(h+" h"+(r?" "+r+" min":"")):r+" min"}
+  function tick(){
+    var d=new Date(),p={};
+    parts.formatToParts(d).forEach(function(x){p[x.type]=x.value});
+    var mins=(parseInt(p.hour,10)%24)*60+parseInt(p.minute,10);
+    if(isNaN(mins))return;
+    var open=mins>=OPEN&&mins<CLOSE;
+    var clock=clockFmt.format(d).replace(/\s/g," ");
+    root.setAttribute("data-state",open?"open":"closed");
+    root.classList.toggle("is-open",open);root.classList.toggle("is-closed",!open);
+    $("stateText").textContent=open?"Open now":"Closed now";
+    $("clock").textContent=clock+" in Hickory Hills, "+p.weekday;
+    var h=$("headline"),left=$("left"),ring=$("ringText");
+    if(open){
+      h.innerHTML='<span class="l1">Walk in</span> <span class="l2 g">until</span> <span class="l3 g">10 PM.</span>';
+      left.innerHTML="<b>Open for "+dur(CLOSE-mins)+" more today.</b> Every day, 8 AM to 10 PM, weekends too.";
+      ring.textContent="Open now, until 10 PM";
+    }else{
+      var wait=mins<OPEN?OPEN-mins:1440-mins+OPEN;
+      h.innerHTML='<span class="l1">Open at</span> <span class="l2 g">8 AM.</span>';
+      left.innerHTML="<b>Closed now. Opens in "+dur(wait)+".</b> Every day, 8 AM to 10 PM, weekends too.";
+      ring.textContent="Closed now, opens at 8 AM";
+    }
+    var pct=mins/1440*100,n=$("needle"),t=$("needleText");
+    n.style.left=pct+"%";t.textContent=clock;
+    t.style.transform=pct<8?"translateX(-6px)":pct>92?"translateX(calc(-100% + 6px))":"translateX(-50%)";
+  }
+  tick();setInterval(tick,30000);
+  var bar=$("bar"),seen={};
+  if(bar&&"IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){seen[e.target.id]=e.isIntersecting});
+      bar.classList.toggle("on",!seen.heroCall&&!seen.call&&seen.started);
+    },{threshold:0});
+    seen.started=true;
+    io.observe($("heroCall"));io.observe($("call"));
   }
 })();
 </script>
